@@ -1,0 +1,107 @@
+
+/////////////////---Clase2---/////////////////
+Patrones de diseño
+-> GOF  tradicionales 
+->Empresariales  manejo de ORM, MVT
+
+
+
+MQTT  
+Patron de diseño  publish- suscribre
+
+Conformado de esta manera
+
+Publicisista ------>  broker(Mosquito)------> suscriptores 
+
+Publicista: Actualiza la informacion al broker 
+Broker: contiene topicos a los que el suscriptor puede pedir
+suscriptor: pequeños nodos que se alimentan de informacion del broker
+
+
+Propiedades del POO
+
+-> Duplicado de codigo
+-> No debe permitir acoplamiento en el codigo
+-> debe tener una unica responsabilidadg
+-> cuidar el uso exesivo de if/else
+
+
+/////////////////---Clase3---/////////////////
+Patrones de diseño 
+
+Los patrones de diseño de software son soluciones reusabkles a problemas recurrentes que ocurren durante el desarrollo de software.
+-> Ayuda a seleccionar y evitar alternativas de diseño que hacena un sistema reusable o que comproementan sus reusabilidad
+-> Nombra, explica y evalua un diseño importante y recurrente en sistemas orientados a objetos
+
+Ojo: No es un diseño finalizado que puede ser trasladado directamente a codigo
+
+
+Un patron de diseño se aplica a problemas de diseñp recurrentes que surgen en dsituaciones de diseño especificas y presentan una soluciones
+
+
+Propiedades de los patrones de diseño
+
+Los patrones documentan experiencias de diseño existentes y bien probadas
+-> Por el contrario proporcionan una manera de reautilizar el conocimeitno de diselo ganado por la experiencia de los practicantes.
+-> Aquellos familiarizados con un adecuado juego de patrones"Pueden aplicar estos inmediatamente al diseño de problemas sin tener que descubrir estos "
+
+Los patrones de diseño identifican y esprecifican abstracciones que estan por encima del nivel de clases, instancias o componentes individuales.
+-> Tipicamente, un aptron describe variops componentes, clases o objetos y detalla sus resposabilidades y ralaciones, asi como su cooperacion.
+-> Todos los componentes en conjunto solucionan el problema al que el patron de diseño se enfoca, y usualmente de manera mas eficiente que un solo componente.
+
+Los patrones proporcionan un vacabulario comun y entendimiento para los principios de diseño.
+-> El nombre de los patrones, si se escoge cuidadosamente,se convierte en parte de un lenguaje de diseño amplimente difundido
+-> Facilitan la discusion efectiva de problemas de diseño y sus soluciones.
+-> Remueven la necesidad de explicar una solucion a un problema en particular con una descripcion larga y complicada.
+-> Se usa el nombre del patron y se explica partes de la solucion.
+
+Los patrones son un mecanismo para la documentacion de arquitectura de software.
+
+Los patrones soportan la construccion de software con Propiedades definidas.
+
+Los patrones ayudan a contruir arquitecturas de fotware complejas y heterogeneas.
+
+5 Principios de los patrones de diseño
+
+1 -> Nombre
+2 -> Contexto del problema
+3 -> Describir la Problematica
+4 -> Solucionar la Problematica
+5 -> Consecuencias de la implementacion
+
+Describir un patron de diseño
+
+-> Nombre del patron y clasificacion 
+-> intencion 
+-> conocido como
+-> motivacion
+-> aplicacion 
+-> estructura
+-> participantes
+-> colaboraciones
+-> Consecuenciasimplementacion
+-> codigo muestra
+-> usos conocidos
+-> patrones relacionados
+
+Clasificaciaon de los patrones de diseño
+
+Creacionañes , estructurales comportamiento.
+
+
+Como objetos
+Creacionales: Proceso de creacion de un objetos
+Estructural: Composicion de clases y objetos
+Comportamiento: Caracterizan la manera en que las clases y objetos interactuan  y distribuyen su responsabilidad
+
+
+
+Como clases
+Creacionales: Difieren parte de la creacion de un objeto a una subclase
+Estructurales: Utiliza la herencia para la composicion de clases
+comportamiento: Usa la herencia para describir algoritmos y control de flujo
+
+
+patron del comportamiento 
+
+
