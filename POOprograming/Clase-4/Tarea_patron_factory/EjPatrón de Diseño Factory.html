@@ -3,7 +3,7 @@
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>PrincipiosPOOHerencia</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>EjPatrón de Diseño Factory</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 
 
@@ -14584,19 +14584,30 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <img src="itcolima.svg" style="width:197px"/>
 </div>
 <div style="display:flex;flex-direction:column;gap:20px;text-align:center"></div><p><h1 align="center">Tecnológico Nacional de México
-campus Colima</h1><br></br></p>
+campus Colima</h1></p>
 <p><h2 align="center">Maestría en Sistemas
 Computacionales</h2><br></br></p>
-<p><h3 align="center">Tecnologias de programacion</h3><br></br></p>
-<p><h3 align="center">Activiad 2</h3><br></br></p>
-<p><h4 align="center">Docente:</h4><br></br></p>
-<p><h4 align="center">D. en c. Patricia Figeroa Millan </h4><br></br></p>
-<p><h4 align="center">Autor:</h4><br></br></p>
-<p><h4 align="center">Ing. Gilberto Rene Martinez Gutierrez G2146013</h4><br></br></p>
-<p><h4 align="center">Ing. Ricardo Gutierrez Valenzuela G2146012</h4><br></br></p>
-<p><h4 align="center"></h4><br></br></p>
-<p><h4 align="center">Villa de Álvarez, Colima, México</h4><br></br></p>
-<p><h4 align="center">30 de agosto de 2022</h4><br></br></p>
+<p><h3 align="center">Patrones de diseño</h3></p>
+<p><h3 align="center">Ejercicio Práctico: Patrón de Diseño Factory</h3><br></br></p>
+<h4 align="center">Docente:</h4>
+<h4 align="center">D. en C. Patricia Figueroa Millan </h4><br></br>
+<h4 align="center">Autor:</h4>
+<h4 align="center">Ing. Gilberto Rene Martinez Gutierrez G2146013</h4><br></br>
+<h4 align="center"></h4>
+<h4 align="center">Villa de Álvarez, Colima, México</h4>
+<h4 align="center">28 de septiembre de 2022</h4>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><h2 align="rigth" >Objetivo</h2></p>
+<p><h4 align="rigth" >Desarrollar un ejercicio sobre los usos e implementacion del patron de diseño Factory</h4></p>
 
 </div>
 </div>
@@ -14608,7 +14619,8 @@ Computacionales</h2><br></br></p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><h1 align="rigth" >¿ Que es la herencia en POO ?</h1><br></br></p>
+<p><h2 align="rigth" >Metodologia</h2></p>
+<p><h4 align="justify" >Para la resolucion del problema se realizo un analisis previo sobre el funcionamiento del patron de diseño factory donde se recurrio al material proporcionado por la profesora, el contenido de este material facilito el entendimiento de lo basico sobre el patron, ademas de permitir analisar unos ejemplos de su funcionamiento </h4></p>
 
 </div>
 </div>
@@ -14620,9 +14632,8 @@ Computacionales</h2><br></br></p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 align="rigth">Es conocido como uno de los pilares de la programacion orientada a objetos.</h4>
-<h4 align="rigth">Es la capacidad de crear clases que adquieren de manera automatica los miembros(atributos y metodos) de otras clases que ya existen.</h4>
-<h4 align="rigth"> Ademas de heredar los metodos y atributos las clases hijas pueden crear sus propios metodos y atributos</h4>
+<p><h2 align="rigth" >Antecedentes del patron de diseño factory</h2></p>
+
 </div>
 </div>
 </div>
@@ -14633,7 +14644,18 @@ Computacionales</h2><br></br></p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 align="rigth">Terminologia importante.</h2>
+<h4 align="justify">El patrón de diseño Factory se centra en agregar un nivel extra de abstracción entre la
+creación del objeto y dónde es éste utilizado, proporciona opciones extras que se
+pueden extender fácilmente en un futuro.
+¿Qué significa esto? que la Fabrica (Factory) se enfoca en la creación de esa abstracción
+extra entre la creación del objeto y dónde se utiliza.
+Es uno de los patrones de diseño más sencillos de comprender, permitiendo seleccionar
+dinámicamente que clases instanciar con base en cierto tipo de lógica. Por ejemplo:
+Suponga un juego para diseñar casas y la casa tiene un silla que ya está por defecto
+agregada en el piso de la casa. Al agregar el patron de diseño Factory se le puede
+proporcionar al usuario la opción de seleccionar dirferentes sillas, y qué tantas sillas en
+tiempo de ejecución, en lugar de que la silla esté codificada en el proyecto cuando se
+ejecuta, el usuario tiene ahora la opción de elejir.</h4>
 </div>
 </div>
 </div>
@@ -14644,7 +14666,7 @@ Computacionales</h2><br></br></p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 align="rigth">Superclase: la clase cuyas características se heredan se conoce como superclase (o una clase base o una clase principal).</h4><h4 align="rigth">Subclase: la clase que hereda la otra clase se conoce como subclase (o una clase derivada, clase extendida o clase hija). La subclase puede agregar sus propios campos y métodos además de los campos y métodos de la superclase.</h4><h4 align="rigth">Reutilización: la herencia respalda el concepto de “reutilización”, es decir, cuando queremos crear una clase nueva y ya hay una clase que incluye parte del código que queremos, podemos derivar nuestra nueva clase de la clase existente. Al hacer esto, estamos reutilizando los campos/atributos y métodos de la clase existente.</h4>
+<h2 align="rigth">Agregar esta abstracción adicional también significa que:</h2>
 </div>
 </div>
 </div>
@@ -14655,18 +14677,9 @@ Computacionales</h2><br></br></p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 align="rigth">Ventajas de la herencia</h2>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 align="rigth">• Reutilización del código: En aquellos casos donde se necesita crear una clase que, además de otros propios, deba incluir los métodos definidos en otra, la herencia evita tener que reescribir todos esos métodos en la nueva clase.</h4><h4 align="rigth">• Mantenimiento de aplicaciones existentes: Utilizando la herencia, si tenemos una clase con una determinada funcionalidad y tenemos la necesidad de ampliar dicha funcionalidad, no necesitamos modificar la clase existente (la cual se puede seguir utilizando para el tipo de programa para la que fue diseñada) sino que podemos crear una clase que herede a la primera, adquiriendo toda su funcionalidad y añadiendo la suya propia.
+<h4 align="rigth">• Las complicaciones de crear instancias de objetos adicionales se puedan ocultar de
+la clase o del método que lo está utilizando.
+</h4><h4 align="rigth">• La separación hace que el código sea más fácil de leer y documentar.
 </h4>
 </div>
 </div>
@@ -14678,8 +14691,7 @@ Computacionales</h2><br></br></p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><h2 align="rigth">Sumary</h2></p>
-<h4 align="rigth">La herencia es un proceso mediante el cual se puede crear una clase hija que hereda de una clase padre, compartiendo sus métodos y atributos. Además de ello, una clase hija puede sobreescribir los métodos o atributos, o incluso definir unos nuevos.</h4>
+<h2 align="rigth">Terminología</h2>
 </div>
 </div>
 </div>
@@ -14690,35 +14702,58 @@ Computacionales</h2><br></br></p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><img src="Ejemplos herencia.jpeg" style="width:320px;height:197px;"/></p>
-
+<h4 align="rigth">•Creador concreto: Cualquier código (aplicación, clase o método que crea objetos),
+conocido comúnmente como cliente, el cual manda llamar al Creador (Factory)
+</h4><h4 align="rigth">• Interface del producto: Inteface que describre los atributos y métodos que el
+Creador requerira con la finalidad de crear el producto u objeto.
+</h4><h4 align="rigth">• Creador: La clase Factory. Declara el método para fabricar los objetos y la cual
+regresará el bojeto solicitado. El Creador Concreto puede acceder al Creador.
+</h4><h4 align="rigth">• El objeto regresado desde la clase Factory.
+</h4>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Creacion de herencia simple de clase</span>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><img src="diagrama patron factory.png" style="width:1080px;height:500px;"/></p>
 
-<span class="c1"># Definimos una clase padre</span>
-<span class="k">class</span> <span class="nc">Animal</span><span class="p">:</span>
-    <span class="k">pass</span>
-
-<span class="c1"># Creamos una clase hija que hereda de la padre</span>
-<span class="k">class</span> <span class="nc">Perro</span><span class="p">(</span><span class="n">Animal</span><span class="p">):</span>
-    <span class="k">pass</span>
-</pre></div>
-
-     </div>
 </div>
 </div>
 </div>
-
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 align="rigth">Instrucciones del ejemplo</h2>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 align="rigth">• En este ejemplo, el cliente desea crear un objeto llamado b .
+</h4><h4 align="rigth">• En lugar de crear directamente b en el cliente, este pregunta al creador (fabrica)
+por el objeto en su luagar.
+</h4><h4 align="rigth">• El creador o fábrica encuentra la clase relevante usando cierto tiepo de lógica para
+los atributos de la petición.
+</h4><h4 align="rigth">• El creador entonces pregunta a la subclase para instanciar el nuevo objeto que
+regresará como referencia al cliente preguntando por éste.
+</h4>
+</div>
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -14727,47 +14762,66 @@ Computacionales</h2><br></br></p>
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Animal</span><span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">especie</span><span class="p">,</span> <span class="n">edad</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">especie</span> <span class="o">=</span> <span class="n">especie</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">edad</span> <span class="o">=</span> <span class="n">edad</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="s2">&quot;Ejemplo Conceptual del Patrón de Diseño Factory&quot;</span>
 
-    <span class="c1"># Método genérico pero con implementación particular</span>
-    <span class="k">def</span> <span class="nf">hablar</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="c1"># Método vacío</span>
-        <span class="k">pass</span>
+<span class="kn">from</span> <span class="nn">abc</span> <span class="kn">import</span> <span class="n">ABCMeta</span><span class="p">,</span> <span class="n">abstractmethod</span>
+<span class="c1">#Se crea la interfaz producto (IProducto)</span>
+<span class="k">class</span> <span class="nc">IProducto</span><span class="p">(</span><span class="n">metaclass</span><span class="o">=</span><span class="n">ABCMeta</span><span class="p">):</span> <span class="s2">&quot;Una clase tipo interfaz hipotética (Producto)&quot;</span>
+<span class="nd">@staticmethod</span>
+<span class="nd">@abstractmethod</span>
+<span class="k">def</span> <span class="nf">crear_objeto</span><span class="p">():</span><span class="s2">&quot;Un método abstracto de la interfaz&quot;</span>
 
-    <span class="c1"># Método genérico pero con implementación particular</span>
-    <span class="k">def</span> <span class="nf">moverse</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="c1"># Método vacío</span>
-        <span class="k">pass</span>
+<span class="c1">#Se crean los &quot;creadores concretos&quot; que llaman al Creador (Fábrica)</span>
+<span class="k">class</span> <span class="nc">CreadorConcretoA</span><span class="p">(</span><span class="n">IProducto</span><span class="p">):</span> 
+    <span class="s2">&quot;Una clase creador concreto que implementa la interfaz IProducto&quot;</span>
 
-    <span class="c1"># Método genérico con la misma implementación</span>
-    <span class="k">def</span> <span class="nf">describeme</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Soy un Animal del tipo&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;CreadorConcretoA&quot;</span>
 
-  
+    <span class="k">def</span> <span class="nf">crear_objeto</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span>
+        
+<span class="k">class</span> <span class="nc">CreadorConcretoB</span><span class="p">(</span><span class="n">IProducto</span><span class="p">):</span> 
+    <span class="s2">&quot;Una clase creador concreto que implementa la interfaz IProducto&quot;</span>
 
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;CreadorConcretoB&quot;</span>
 
-<span class="c1"># Perro hereda de Animal</span>
-<span class="k">class</span> <span class="nc">Perro</span><span class="p">(</span><span class="n">Animal</span><span class="p">):</span>
-    <span class="k">pass</span>
+    <span class="k">def</span> <span class="nf">crear_objeto</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span>
 
-<span class="k">class</span> <span class="nc">Gato</span><span class="p">(</span><span class="n">Animal</span><span class="p">):</span>
-    <span class="k">pass</span>
+<span class="k">class</span> <span class="nc">CreadorConcretoC</span><span class="p">(</span><span class="n">IProducto</span><span class="p">):</span>
+    <span class="s2">&quot;Una clase creador concreto que implementa la interfaz IProducto&quot;</span>
 
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;CreadorConcretoC&quot;</span>
 
-<span class="c1"># creamos un objeto de la clase Perro</span>
-<span class="n">mi_perro</span> <span class="o">=</span> <span class="n">Perro</span><span class="p">(</span><span class="s1">&#39;mamífero&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
-<span class="c1"># creamos un objeto de la clase Gato</span>
-<span class="n">mi_Gato</span><span class="o">=</span><span class="n">Gato</span><span class="p">(</span><span class="s2">&quot;Felino&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">crear_objeto</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span>
 
+<span class="c1"># Clase Factory</span>
+<span class="k">class</span> <span class="nc">Creador</span><span class="p">:</span>
+     <span class="s2">&quot;La clase Creador - Factory&quot;</span>
+     <span class="nd">@staticmethod</span>
 
+     <span class="k">def</span> <span class="nf">crear_objeto</span><span class="p">(</span><span class="n">propiedad</span><span class="p">):</span> 
+            <span class="s2">&quot;Método estático para obtener un producto concreto&quot;</span>
+            <span class="k">if</span> <span class="n">propiedad</span> <span class="o">==</span> <span class="s1">&#39;a&#39;</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">CreadorConcretoA</span><span class="p">()</span>
+            <span class="k">if</span> <span class="n">propiedad</span> <span class="o">==</span> <span class="s1">&#39;b&#39;</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">CreadorConcretoB</span><span class="p">()</span>
+            <span class="k">if</span> <span class="n">propiedad</span> <span class="o">==</span> <span class="s1">&#39;c&#39;</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">CreadorConcretoC</span><span class="p">()</span>
 
-<span class="n">mi_perro</span><span class="o">.</span><span class="n">describeme</span><span class="p">()</span>
-<span class="n">mi_Gato</span><span class="o">.</span><span class="n">describeme</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Soy un&quot;</span><span class="p">,</span><span class="n">mi_perro</span><span class="o">.</span><span class="n">especie</span><span class="p">,</span><span class="s2">&quot;Tengo&quot;</span><span class="p">,</span><span class="n">mi_perro</span><span class="o">.</span><span class="n">edad</span><span class="p">,</span><span class="s2">&quot;Años&quot;</span><span class="p">)</span>
-<span class="c1"># Soy un Animal del tipo Perro</span>
+            <span class="k">return</span> <span class="kc">None</span>
+        <span class="c1"># Cuando se desea un nivel mayor de abstracción</span>
+        <span class="c1"># Aplicación cliente</span>
+        <span class="c1">#PRODUCTO = Creador.crear_objeto(&#39;c&#39;)</span>
+        <span class="c1">#print(PRODUCTO.name)</span>
+        <span class="c1">#Se puede realizar directamente</span>
+
+<span class="n">PRODUCTO</span> <span class="o">=</span> <span class="n">CreadorConcretoB</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">PRODUCTO</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14789,9 +14843,7 @@ Computacionales</h2><br></br></p>
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Soy un Animal del tipo Perro
-Soy un Animal del tipo Gato
-Soy un mamífero Tengo 10 Años
+<pre>CreadorConcretoB
 </pre>
 </div>
 </div>
@@ -14807,9 +14859,601 @@ Soy un mamífero Tengo 10 Años
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><h2 align="rigth">Referencias</h2></p>
-<h4 align="rigth">[2]2022. [Online]. Available: https://javadesdecero.es/poo/herencia-java-tipos-ejemplos/#:~:text=En%20el%20lenguaje%20de%20Java,agrega%20sus%20propios%20elementos%20%C3%BAnicos. [Accessed: 30- Aug- 2022].</h4>
-<h4 align="rigth">[1]"Herencia en Python", El Libro De Python, 2022. [Online]. Available: https://ellibrodepython.com/herencia-en-python. [Accessed: 30- Aug- 2022].</h4>
+<h2 align="rigth">Problematica del ejemplo</h2>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 align="rigth">Supongamos que se desea desarrolla un juego de carreras y la tarea es crear tráfico
+aleatorio en las pistas de carreras, se necesita producir un Carro, una Bicicleta y una
+Camioneta de manera aleatoria ¿Cómo podemos crear estos objetos?</h4><h4 align="rigth">• 1. Crear un clase para cada tipo de objeto.
+</h4><h4 align="rigth">• 2. Crear una fabrica de vehiculos.
+</h4><h4 align="rigth">Pero... ¿Qué pasa si tengo que hacer adecuaciones? ¿cuantas clases y cuantos objetos
+se verían afectadas?
+</h4>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 align="rigth">Solucion </h2>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 align="rigth">Para crear objetos de las clases mencionadas anteriormente, se empleará el patrón de
+diseño Factory, el cual a través de un metodo nos devolverá los objetos creados acorde
+a cada tipo de clase o cualquier clase que se pueda agregar de vehículos.</h4>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">abc</span> <span class="kn">import</span> <span class="n">ABCMeta</span><span class="p">,</span> <span class="n">abstractmethod</span>
+<span class="k">class</span> <span class="nc">IVehiculo</span><span class="p">(</span><span class="n">metaclass</span><span class="o">=</span><span class="n">ABCMeta</span><span class="p">):</span>
+    <span class="s2">&quot;Una clase tipo interfaz para vehículos (Producto)&quot;</span>
+    <span class="nd">@staticmethod</span>
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span> <span class="nf">crear_objeto</span><span class="p">():</span>
+     <span class="s2">&quot;Un método abastracto de la interfaz&quot;</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Carro</span><span class="p">(</span><span class="n">IVehiculo</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Esto es un carro!!&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">area</span> <span class="o">=</span> <span class="mi">100</span>
+        
+    <span class="k">def</span> <span class="nf">crear_objeto</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Bicicleta</span><span class="p">(</span><span class="n">IVehiculo</span><span class="p">):</span>
+
+<span class="c1">#Se agregó un parámetro de ejemplo en el constructor (inicializador)</span>
+<span class="c1">#Que se pasa a la clase desde el Factory (Creador)</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">tipo</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Esta es una bicicleta!!&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">area</span> <span class="o">=</span> <span class="mi">50</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pedales</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">asiento</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tipo_bike</span> <span class="o">=</span> <span class="n">tipo</span>
+<span class="c1">#print(tipo)</span>
+    <span class="k">def</span> <span class="nf">crear_objeto</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Camioneta</span><span class="p">(</span><span class="n">IVehiculo</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">area</span> <span class="o">=</span> <span class="mi">1000</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Esta es una Camioneta!!&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">doble_traccion</span> <span class="o">=</span> <span class="kc">False</span>
+        
+    <span class="k">def</span> <span class="nf">crear_objeto</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span>
+    <span class="k">def</span> <span class="nf">velocidad</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;Arrancando....&quot;</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">CreadorVehiculos</span><span class="p">:</span>
+    <span class="s2">&quot;Factory Class&quot;</span>
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">crear_objeto</span><span class="p">(</span><span class="n">propiedad</span><span class="p">):</span>
+        <span class="s2">&quot;A static method to get a concrate product&quot;</span>
+        <span class="k">if</span> <span class="n">propiedad</span> <span class="o">==</span><span class="s2">&quot;carro&quot;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">Carro</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="n">propiedad</span> <span class="o">==</span> <span class="s2">&quot;bicicleta&quot;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">Bicicleta</span><span class="p">(</span><span class="s2">&quot;montaña&quot;</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">propiedad</span> <span class="o">==</span> <span class="s2">&quot;camioneta&quot;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">Camioneta</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">None</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Un objeto se crea normalmente así:</span>
+
+<span class="c1">#carro = Car()</span>
+<span class="c1">#print(carro.name)</span>
+<span class="c1">#print(carro.area)</span>
+<span class="c1"># The Client</span>
+<span class="c1"># Creación de objeto mendiante el factory.</span>
+<span class="n">camioneta</span> <span class="o">=</span> <span class="n">CreadorVehiculos</span><span class="p">()</span><span class="o">.</span><span class="n">crear_objeto</span><span class="p">(</span><span class="s2">&quot;camioneta&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">camioneta</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">camioneta</span><span class="o">.</span><span class="n">velocidad</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">camioneta</span><span class="o">.</span><span class="n">doble_traccion</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Esta es una Camioneta!!
+Arrancando....
+False
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">carro</span> <span class="o">=</span> <span class="n">CreadorVehiculos</span><span class="p">()</span><span class="o">.</span><span class="n">crear_objeto</span><span class="p">(</span><span class="s2">&quot;carro&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">carro</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Esto es un carro!!
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">bike</span> <span class="o">=</span> <span class="n">CreadorVehiculos</span><span class="p">()</span><span class="o">.</span><span class="n">crear_objeto</span><span class="p">(</span><span class="s2">&quot;bicicleta&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">bike</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">bike</span><span class="o">.</span><span class="n">pedales</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">bike</span><span class="o">.</span><span class="n">tipo_bike</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Esta es una bicicleta!!
+True
+montaña
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">bike2</span> <span class="o">=</span> <span class="n">CreadorVehiculos</span><span class="p">()</span><span class="o">.</span><span class="n">crear_objeto</span><span class="p">(</span><span class="s2">&quot;bicicleta&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">bike2</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">bike2</span><span class="o">.</span><span class="n">pedales</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Esta es una bicicleta!!
+True
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 align="rigth">  Ejercicio practico</h2>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 align="rigth">Suponga un caso de uso de ejemplo, en donde una interfaz de usuario permite al usuario
+seleccionar elementos de un menú, como sillas.</h4><h4 align="rigth">Al usuario se le ha dado una opción usando algún tipo de interfaz de navegación, y no se
+sabe qué opción o cuántas seleccionará el usuario hasta que la aplicación se esté
+ejecutando realmente y el usuario comience a usarla.</h4><h4 align="rigth">Entonces, cuando el usuario seleccione la silla, la fábrica toma alguna propiedad
+relacionada con esa selección, como un ID, tipo u otro atributo, y luego decide qué
+subclase relevante instanciar para devolver el objeto apropiado.</h4>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">abc</span> <span class="kn">import</span> <span class="n">ABCMeta</span><span class="p">,</span> <span class="n">abstractmethod</span>
+<span class="k">class</span> <span class="nc">Interfaz_Sillas</span><span class="p">(</span><span class="n">metaclass</span><span class="o">=</span><span class="n">ABCMeta</span><span class="p">):</span>
+    <span class="s2">&quot;Una clase tipo interfaz para sillas (Producto)&quot;</span>
+    <span class="nd">@staticmethod</span>
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span> <span class="nf">crear_objeto</span><span class="p">():</span>
+     <span class="s2">&quot;Un método abastracto de la interfaz&quot;</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Subclases de la clase interfaz_sillas</span>
+<span class="k">class</span> <span class="nc">Silla_Comedor</span><span class="p">(</span><span class="n">Interfaz_Sillas</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Esto es una silla de comedor!!&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">price</span> <span class="o">=</span> <span class="mi">1000</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;Blanco&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">material</span> <span class="o">=</span> <span class="s2">&quot;Madera&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">patas</span> <span class="o">=</span> <span class="mi">4</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tipo</span> <span class="o">=</span> <span class="s2">&quot;Comedor&quot;</span>
+           
+    <span class="k">def</span> <span class="nf">crear_objeto</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Silla_Exterior</span><span class="p">(</span><span class="n">Interfaz_Sillas</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Esto es una silla de exterior!&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">price</span> <span class="o">=</span> <span class="mi">1500</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;Blanco&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">material</span> <span class="o">=</span> <span class="s2">&quot;Metal&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">patas</span> <span class="o">=</span> <span class="mi">4</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tipo</span> <span class="o">=</span> <span class="s2">&quot;Exterior&quot;</span>
+           
+    <span class="k">def</span> <span class="nf">crear_objeto</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Silla_Periquera</span><span class="p">(</span><span class="n">Interfaz_Sillas</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Esto es una periquera !!&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">price</span> <span class="o">=</span> <span class="mi">800</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;Blanco&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">material</span> <span class="o">=</span> <span class="s2">&quot;Madera&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">patas</span> <span class="o">=</span> <span class="mi">3</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tipo</span> <span class="o">=</span> <span class="s2">&quot;Periquera&quot;</span>
+           
+    <span class="k">def</span> <span class="nf">crear_objeto</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Clase constructora</span>
+<span class="k">class</span> <span class="nc">CreadorSillas</span><span class="p">:</span>
+    <span class="s2">&quot;Factory Class&quot;</span>
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">crear_objeto</span><span class="p">(</span><span class="n">propiedad</span><span class="p">):</span>
+        <span class="s2">&quot;Metodo estatico para la contruccion de objetos&quot;</span>
+
+        <span class="k">if</span> <span class="n">propiedad</span> <span class="o">==</span><span class="s2">&quot;Silla comedor&quot;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">Silla_Comedor</span><span class="p">()</span>
+
+        <span class="k">elif</span> <span class="n">propiedad</span> <span class="o">==</span> <span class="s2">&quot;Silla exterior&quot;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">Silla_Exterior</span><span class="p">()</span>
+
+        <span class="k">elif</span> <span class="n">propiedad</span> <span class="o">==</span> <span class="s2">&quot;Periquera&quot;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">Silla_Periquera</span><span class="p">()</span>
+            
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">None</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Creacion de objetos</span>
+<span class="n">Id_1506_Silla</span> <span class="o">=</span> <span class="n">CreadorSillas</span><span class="p">()</span><span class="o">.</span><span class="n">crear_objeto</span><span class="p">(</span><span class="s2">&quot;Silla comedor&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Id_1506_Silla</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Id_1506_Silla</span><span class="o">.</span><span class="n">price</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Id_1506_Silla</span><span class="o">.</span><span class="n">color</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Id_1506_Silla</span><span class="o">.</span><span class="n">material</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Id_1506_Silla</span><span class="o">.</span><span class="n">patas</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Id_1506_Silla</span><span class="o">.</span><span class="n">tipo</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Esto es una silla de comedor!!
+1000
+Blanco
+Madera
+4
+Comedor
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 align="rigth"> Diagrama UML del programa sillas</h2>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><img src="uml sillas.png" style="width:1080px;height:500px;"/></p>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><h2 align="rigth" >Conclusiones</h2></p>
+<p><h4 align="justify" >Gracias al desarrolo de esta actividad se logro comprender el funcionamiento del patron de diseño "Factory", a traves de este patron se comprendio la estructura con la cual se deben diseñar sistemas expansibles dentro de la creacion de objetos</h4></p>
+
 </div>
 </div>
 </div>
