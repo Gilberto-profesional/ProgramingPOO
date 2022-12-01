@@ -8,8 +8,9 @@ def main():
         c.execute(''' SELECT count(name) FROM sqlite_master WHERE type='table' AND name='contactos' ''')
         if c.fetchone()[0]==1 :
             print("La tabla contactos ya existe.")
-            view=ContactosView()
-            controller=ContactosController(view)
+            view = ContactosView()
+            controller = ContactosController(view)
+            view.set_controller(controller)
             controller.star()
             
         else:
