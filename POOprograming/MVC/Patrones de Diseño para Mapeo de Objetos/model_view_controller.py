@@ -9,4 +9,6 @@ my_items = [
 
 c = Controller(ModelBasic(my_items), View())
 
+c.insert_item('water', 5, 6)
+
 c.show_items()
