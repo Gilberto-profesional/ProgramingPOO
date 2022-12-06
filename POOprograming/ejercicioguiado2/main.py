@@ -1,6 +1,7 @@
 import sqlite3
 from contactos_view import ContactosView
 from contactos_controller import ContactosController 
+from contactos_repository import ContactsRepository
 
 def main():
     with sqlite3.connect("contactos.db") as conn:
@@ -8,8 +9,9 @@ def main():
         c.execute(''' SELECT count(name) FROM sqlite_master WHERE type='table' AND name='contactos' ''')
         if c.fetchone()[0]==1 :
             print("La tabla contactos ya existe.")
+            repo=ContactsRepository(conn)
             view = ContactosView()
-            controller = ContactosController(view)
+            controller = ContactosController(repo,view)
             view.set_controller(controller)
             controller.star()
             
